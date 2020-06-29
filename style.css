@@ -199,6 +199,45 @@ select {
 	animation-play-state: running;
 }
 
+.popup {
+	display: none;
+	background-color: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	height: 3rem;
+	width: 20rem;
+	border-radius: 10px;
+	position: absolute;
+	bottom: 2vh;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	left: 10vw;
+	z-index: 10;
+	animation-name: popup-transition;
+	animation-duration: 3s;
+	animation-direction: alternate;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+	animation-play-state: running;
+}
+
+.popup p {
+	margin: 0;
+}
+
+@keyframes popup-transition {
+	0%,
+	100% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 1;
+	}
+}
+
 @keyframes fill-wall-color {
 	0% {
 		transform: scale(.3);

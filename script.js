@@ -23,6 +23,7 @@ let pointKey = null; // identifies each type
 let startEndKey; // tells if drag is on start, end or a normal box
 let algorithmKey = 1;
 let delay = 0;
+let finished = false;
 class boardCell {
 	constructor(x, y) {
 		this.x = x;
@@ -86,6 +87,7 @@ function clearBoard() {
 		board[index].g = Infinity;
 		board[index].prevNode = null;
 	});
+	finished = false;
 	setDefault();
 }
 
@@ -269,57 +271,65 @@ boxes.click((e) => {
 });
 
 $('#run').click(() => {
-	switch (algorithmKey) {
-		case 1:
-			dijkstra(
-				startingPoint,
-				endingPoint,
-				board,
-				boxes,
-				delay,
-				delayIncrement
-			);
-			break;
-		case 2:
-			aStarSearch(
-				startingPoint,
-				endingPoint,
-				board,
-				boxes,
-				delay,
-				delayIncrement
-			);
-			break;
-		case 3:
-			bestFirst(
-				startingPoint,
-				endingPoint,
-				board,
-				boxes,
-				delay,
-				delayIncrement
-			);
-			break;
-		case 4:
-			bfs(
-				startingPoint,
-				endingPoint,
-				board,
-				boxes,
-				delay,
-				delayIncrement
-			);
-			break;
-		case 5:
-			dfs(
-				startingPoint,
-				endingPoint,
-				board,
-				boxes,
-				delay,
-				delayIncrement
-			);
-			break;
+	if (finished) {
+		$('.popup').css('display', 'flex');
+		setTimeout(() => {
+			$('.popup').css('display', 'none');
+		}, 3000);
+	} else {
+		finished = true;
+		switch (algorithmKey) {
+			case 1:
+				dijkstra(
+					startingPoint,
+					endingPoint,
+					board,
+					boxes,
+					delay,
+					delayIncrement
+				);
+				break;
+			case 2:
+				aStarSearch(
+					startingPoint,
+					endingPoint,
+					board,
+					boxes,
+					delay,
+					delayIncrement
+				);
+				break;
+			case 3:
+				bestFirst(
+					startingPoint,
+					endingPoint,
+					board,
+					boxes,
+					delay,
+					delayIncrement
+				);
+				break;
+			case 4:
+				bfs(
+					startingPoint,
+					endingPoint,
+					board,
+					boxes,
+					delay,
+					delayIncrement
+				);
+				break;
+			case 5:
+				dfs(
+					startingPoint,
+					endingPoint,
+					board,
+					boxes,
+					delay,
+					delayIncrement
+				);
+				break;
+		}
 	}
 });
 
