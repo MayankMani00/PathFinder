@@ -1,3 +1,3 @@
 # PathFinder
 
-https://mayankmani00.github.io/PathFinder/.
+https://mayankmani00.github.io/PathFinder/
