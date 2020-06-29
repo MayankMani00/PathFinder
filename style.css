@@ -199,8 +199,8 @@ select {
 	animation-play-state: running;
 }
 
-.popup {
-	display: none !important;
+#popup {
+	display: none;
 	background-color: rgba(0, 0, 0, 0.6);
 	color: #fff;
 	height: 3rem;
@@ -221,7 +221,7 @@ select {
 	animation-play-state: running;
 }
 
-.popup p {
+#popup p {
 	margin: 0;
 }
 

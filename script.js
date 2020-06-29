@@ -272,9 +272,9 @@ boxes.click((e) => {
 
 $('#run').click(() => {
 	if (finished) {
-		$('.popup').css('display', 'flex');
+		$('#popup').css('display', 'flex');
 		setTimeout(() => {
-			$('.popup').css('display', 'none');
+			$('#popup').css('display', 'none');
 		}, 3000);
 	} else {
 		finished = true;
