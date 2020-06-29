@@ -1,4 +1,4 @@
-import visualizePath from './visualize.js';
+import visualizePath from '../visualize.js';
 
 const getNeightbors = (cell, openList, board) => {
 	if (cell.y > 0) {

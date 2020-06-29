@@ -1,4 +1,4 @@
-import visualizePath from './visualize.js';
+import visualizePath from '../visualize.js';
 
 //returns smaller arr that has least value(s)
 function getMin(sortedArr) {

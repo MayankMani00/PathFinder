@@ -190,6 +190,7 @@ select {
 }
 
 .path {
+	background-color: rgba(0, 190, 136, 0.75);
 	animation-name: fill-path-color;
 	animation-duration: 0.5s;
 	animation-direction: alternate;

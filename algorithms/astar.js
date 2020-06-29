@@ -1,4 +1,4 @@
-import visualizePath from './visualize.js';
+import visualizePath from '../visualize.js';
 
 const manhattanDistance = (x1, y1, endingPoint) =>
 	Math.abs(x1 - endingPoint.x) + Math.abs(y1 - endingPoint.y);

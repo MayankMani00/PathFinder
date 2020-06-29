@@ -1,14 +1,16 @@
-//grid: 50 x 50
+//grid: 50 x 20
+import createGrid from './grid.js';
+import dijkstra from './algorithms/dijkstra.js';
+import aStarSearch from './algorithms/astar.js';
+import bestFirst from './algorithms/bestFirst.js';
+import bfs from './algorithms/bfs.js';
+import dfs from './algorithms/dfs.js';
 
-import aStarSearch from './astar.js';
-import dijkstra from './dijkstra.js';
-import bestFirst from './bestFirst.js';
-import bfs from './bfs.js';
-import dfs from './dfs.js';
+createGrid(50, 20);
 
 let startingPoint = {
-	x : 0,
-	y : 0
+	x : 10,
+	y : 10
 };
 
 let endingPoint = {
@@ -19,7 +21,7 @@ let endingPoint = {
 let key; //for eraser vs weight types
 let pointKey = null; // identifies each type
 let startEndKey; // tells if drag is on start, end or a normal box
-let algorithmKey = '1';
+let algorithmKey = 1;
 let delay = 0;
 class boardCell {
 	constructor(x, y) {
