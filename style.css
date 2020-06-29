@@ -200,7 +200,7 @@ select {
 }
 
 .popup {
-	display: none;
+	display: none !important;
 	background-color: rgba(0, 0, 0, 0.6);
 	color: #fff;
 	height: 3rem;
