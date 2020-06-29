@@ -13,7 +13,7 @@ let startingPoint = {
 
 let endingPoint = {
 	x : 15,
-	y : 40
+	y : 15
 };
 
 let key; //for eraser vs weight types
