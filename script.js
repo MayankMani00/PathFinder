@@ -1,12 +1,10 @@
 //grid: 50 x 20
-import createGrid from './grid.js';
+import './grid.js';
 import dijkstra from './algorithms/dijkstra.js';
 import aStarSearch from './algorithms/astar.js';
 import bestFirst from './algorithms/bestFirst.js';
 import bfs from './algorithms/bfs.js';
 import dfs from './algorithms/dfs.js';
-
-createGrid(50, 20);
 
 let startingPoint = {
 	x : 10,
