@@ -1,17 +1,19 @@
 //grid: 50 x 20
-import './grid.js';
+import createGrid from './grid.js';
 import dijkstra from './algorithms/dijkstra.js';
 import aStarSearch from './algorithms/astar.js';
 import bestFirst from './algorithms/bestFirst.js';
 import bfs from './algorithms/bfs.js';
 import dfs from './algorithms/dfs.js';
 
-let startingPoint = {
+createGrid(20, 50);
+
+export let startingPoint = {
 	x : 10,
 	y : 10
 };
 
-let endingPoint = {
+export let endingPoint = {
 	x : 15,
 	y : 15
 };
@@ -22,7 +24,7 @@ let startEndKey; // tells if drag is on start, end or a normal box
 let algorithmKey = 1;
 let delay = 0;
 let finished = false;
-class boardCell {
+export class boardCell {
 	constructor(x, y) {
 		this.x = x;
 		this.y = y;
@@ -35,8 +37,7 @@ class boardCell {
 		this.f;
 	}
 }
-// const color = 'rgba(0,149,221,0.5)';
-const boxes = $('.graph-row .graph-col');
+
 const points = {
 	1 : 'wall',
 	2 : 'medium',
@@ -46,6 +47,7 @@ const points = {
 	6 : 'reset-board'
 };
 
+const boxes = $('.graph-row .graph-col');
 //initializes the board
 const board = [
 	...boxes
