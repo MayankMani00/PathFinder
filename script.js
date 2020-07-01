@@ -69,8 +69,8 @@ function setDefault() {
 
 	endBox.classList.add('end');
 	endBox.setAttribute('draggable', true);
-	$('.start')[0].innerHTML = '<i class="fas fa-star-of-life"></i>';
-	$('.end')[0].innerHTML = '<i class="far fa-dot-circle"></i>';
+	startingBox.innerHTML = '<i class="fas fa-star-of-life"></i>';
+	endBox.innerHTML = '<i class="far fa-dot-circle"></i>';
 }
 
 //clears everything
@@ -224,7 +224,7 @@ $('.point-type button').click((e) => {
 	pointKey = e.target.value;
 	key = true;
 
-	if (pointKey == 4) key = false;
+	if (pointKey == 4 || pointKey == 5) key = false;
 });
 
 //Marks points
