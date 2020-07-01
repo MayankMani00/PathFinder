@@ -45,7 +45,7 @@ function createGrid() {
 		const row = $('<div></div>').attr('class', 'graph-row');
 		// row.css('height', h);
 		for (var j = 0; j < columns; j++) {
-			if (i == 4 && j == 4) {
+			if (i == 9 && j == 9) {
 				const startBox = `<div class="graph-col start" draggable><i class="fas fa-star-of-life"></i></div>`;
 				row.append(startBox);
 				continue;
